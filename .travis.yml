@@ -1,0 +1,10 @@
+sudo: required
+
+language: generic
+
+services:
+  - docker
+
+script:
+  - bin/build.sh
+  - bin/push.sh
