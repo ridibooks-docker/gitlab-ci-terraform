@@ -10,10 +10,8 @@ services:
   - docker
 
 env:
-  - TERRAFORM_VERSION=0.11.4
-  - TERRAFORM_VERSION=0.11.7
-  - TERRAFORM_VERSION=0.11.10
   - TERRAFORM_VERSION=0.11.11
+  - TERRAFORM_VERSION=0.11.13
 
 script:
   - bin/build.sh
