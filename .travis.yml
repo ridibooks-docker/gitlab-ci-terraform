@@ -12,6 +12,8 @@ services:
 env:
   - TERRAFORM_VERSION=0.11.11
   - TERRAFORM_VERSION=0.11.13
+  - TERRAFORM_VERSION=0.11.14
+  - TERRAFORM_VERSION=0.12.2
 
 script:
   - bin/build.sh
