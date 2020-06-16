@@ -19,6 +19,8 @@ env:
   - TERRAFORM_VERSION=0.12.13
   - TERRAFORM_VERSION=0.12.16
   - TERRAFORM_VERSION=0.12.17
+  - TERRAFORM_VERSION=latest
+  
 
 script:
   - bin/build.sh

@@ -2,8 +2,9 @@
 
 set -e
 
-if [ -z "${TERRAFORM_VERSION}" ]; then
-    TERRAFORM_VERSION=0.11.3
+if [[ -z "${TERRAFORM_VERSION}" || "${TERRAFORM_VERSION}" == 'latest' ]]
+then
+    TERRAFORM_VERSION=$(curl https://checkpoint-api.hashicorp.com/v1/check/terraform | sed -n 's|.*"current_version":"\([^"]*\)".*|\1|p')
 fi
 
 CONTAINER_ARCHITECTURE=linux_amd64
