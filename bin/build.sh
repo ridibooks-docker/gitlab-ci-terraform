@@ -3,7 +3,7 @@
 set -e
 
 if [ -z "${TERRAFORM_VERSION}" ]; then
-    TERRAFORM_VERSION=0.11.3
+    TERRAFORM_VERSION=$(curl https://checkpoint-api.hashicorp.com/v1/check/terraform | jq -r ".current_version")
 fi
 
 CONTAINER_ARCHITECTURE=linux_amd64
