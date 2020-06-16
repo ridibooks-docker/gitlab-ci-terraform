@@ -2,7 +2,8 @@
 
 set -e
 
-if [ -z "${TERRAFORM_VERSION}" ]; then
+if [[ -z "${TERRAFORM_VERSION}" || "${TERRAFORM_VERSION}" == 'latest' ]]
+then
     TERRAFORM_VERSION=$(curl https://checkpoint-api.hashicorp.com/v1/check/terraform | sed -n 's|.*"current_version":"\([^"]*\)".*|\1|p')
 fi
 
